@@ -1,12 +1,5 @@
-
-
-
 *.ejs linguist-language=EJS
-
-
 *.css linguist-language=CSS
-
-
 *.js linguist-language=JavaScript
 vendor/* linguist-vendored
 node_modules/* linguist-vendored
