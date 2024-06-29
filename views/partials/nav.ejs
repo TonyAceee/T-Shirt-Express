@@ -1,0 +1,156 @@
+<style>
+
+	nav {
+	display: flex;
+	justify-content: center;
+	background-color: #000;
+	padding: 10px;
+	}
+
+	nav a {
+	color: white;
+	margin: 0 15px;
+	text-decoration: none;
+	transition: color 0.3s;
+	}
+
+	nav a:hover {
+	color: #ff4081;
+	}
+	.dropdown {
+	position: relative;
+	display: inline-block;
+	}
+
+	.dropdown-btn {
+	background: none;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	padding: 0 0 0 8px;
+	display: block;
+	font-size: 17px;
+	text-decoration: none;
+	margin: 10px;
+	}
+
+	.dropdown-content {
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #000000;
+	min-width: 200px;
+	z-index: 1;
+	font-size: 17px;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	}
+	.dropdown-content a {
+	padding: 10px 0;
+	}
+
+
+
+	.dropdown:hover .dropdown-content {
+	opacity: 1;
+	visibility: visible;
+	}
+
+
+
+	.bag {
+	position: absolute;
+	right: 30px;
+	}
+
+	.s-nav {
+	display: grid;
+	place-items: center;
+	background-color: #000000;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	}
+
+	.s-nav ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	}
+
+	.s-nav ul li {
+	margin: 0 8px 0 0;
+	}
+
+	.bag svg {
+	height: 35px;
+	width: 35px;
+	transition: transform 0.3s ease, fill 0.3s ease;
+	}
+
+	.bag::before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	bottom: -5px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	}
+
+	.bag:hover::before {
+	opacity: 1;
+	}
+
+	.bag:hover svg {
+	transform: scale(1.2);
+	fill: #fff;
+	}
+</style>
+
+<nav class="s-nav">
+	<ul>
+		<li class="dropdown">
+			<a href="/category/for-him" class="dropdown-btn">For Him</a>
+			<div class="dropdown-content">
+				<a href="/category/for-him?subcategory=tshirts">T-shirts</a>
+				<a href="/category/for-him?subcategory=polo-shirts">Polo shirts</a>
+				<a href="/category/for-him?subcategory=shorts">Shorts</a>
+			</div>
+		</li>
+		<li class="dropdown">
+			<a href="/category/for-her" class="dropdown-btn">For Her</a>
+			<div class="dropdown-content">
+				<a href="/category/for-her?subcategory=dresses">Dresses</a>
+				<a href="/category/for-her?subcategory=blouses">Blouses</a>
+				<a href="/category/for-her?subcategory=skirts">Skirts</a>
+			</div>
+		</li>
+		<li class="dropdown">
+			<a href="/category/for-kids" class="dropdown-btn">For Kids</a>
+			<div class="dropdown-content">
+				<a href="/category/for-kids?subcategory=boots">Boots</a>
+				<a href="/category/for-kids?subcategory=jackets">Jackets</a>
+				<a href="/category/for-kids?subcategory=hoodies">Hoodies</a>
+			</div>
+		</li>
+	</ul>
+	<a href="/cart" class="bag">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+			<path fill="#ffffff" d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
+		</svg>
+	</a>
+</nav>

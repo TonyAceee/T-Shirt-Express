@@ -1,0 +1,205 @@
+<style>
+	header {
+	width: 100%;
+	background-color: #fff;
+	display: block;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0 0 0;
+	}
+	.logo img {
+	width: 75px;
+	height: auto;
+	margin: 0 30px
+	}
+	.navbar {
+	position: relative;
+	width: 100%;
+	}
+
+	.navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0px;
+	right: 35px;
+	}
+
+	.navbar ul li {
+	display: inline-block;
+	border-right: 2px solid #333;
+	padding-right: 6px;
+	}
+
+	.navbar ul li a {
+	padding: 10px 8px;
+	text-decoration: none;
+	color: #333;
+	font-size: 17px;
+	}
+	.modal {
+	display: none;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 100vw;
+	height: 100vw;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 0;
+	margin: 0;
+	}
+
+	.modal-content {
+	background-color: white;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 300px;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	}
+
+	.modal-content h2 {
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 20px;
+	}
+
+	.form-container {
+	display: none;
+	}
+
+	.form-container.active {
+	display: block;
+	}
+
+	.modal-content label {
+	display: block;
+	margin: 10px 0 5px;
+	}
+
+	.modal-content input[type="text"],
+	.modal-content input[type="password"],
+	.modal-content input[type="email"] {
+	width: 100%;
+	padding: 10px;
+	margin: 5px 0 10px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	}
+
+	.modal-content button {
+	background-color: black;
+	color: white;
+	padding: 10px 15px;
+	margin: 10px 5px 0 0;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 14px;
+	}
+
+	.modal-content button:hover {
+	background-color: #d40000;
+	}
+
+	.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+	}
+
+
+	#show-register-btn,
+	#show-login-btn {
+	background: none;
+	border: none;
+	color: #007bff;
+	cursor: pointer;
+	text-decoration: underline;
+	font-size: 14px;
+	}
+
+	#show-register-btn:hover,
+	#show-login-btn:hover {
+	color: #0056b3;
+	}
+
+	.form-container {
+	display: none;
+	}
+
+	.form-container.active {
+	display: block;
+	}
+</style>
+
+<header>
+	<div class="navbar">
+		<a href="/" class="logo">
+			<img src="/img/logo.png" alt="Logo" />
+		</a>
+		<ul>
+			<li>
+				<a href="#help">Help</a>
+			</li>
+			<li id="login-li">
+				<a href="#login" id="login-btn">Login</a>
+			</li>
+		</ul>
+	</div>
+	<div id="modal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			
+			<div id="login-form" class="form-container active">
+				<h2>Login</h2>
+				<form id="login" action="/login" method="post">
+					<label for="login-username">Username:</label>
+					<input type="text" id="login-username" name="username" required="" />
+					<br />
+					<label for="login-password">Password:</label>
+					<input type="password" id="login-password" name="password" required="" />
+					<br />
+					<button type="submit">Submit</button>
+					<button type="button" id="show-register-btn">Register</button>
+				</form>
+			</div>
+			<div id="register-form" class="form-container">
+				<h2>Register</h2>
+				<form id="register" action="/register" method="post">
+					<label for="user-email">Email:</label>
+					<input type="email" id="register-email" name="email" required="" />
+					<br />
+					<label for="register-username">Username:</label>
+					<input type="text" id="register-username" name="username" required="" />
+					<br />
+					<label for="register-password">Password:</label>
+					<input type="password" id="register-password" name="password" required="" />
+					<br />
+					<button type="submit">Submit</button>
+					<button type="button" id="show-login-btn">Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</header>

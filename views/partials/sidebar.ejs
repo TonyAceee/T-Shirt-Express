@@ -1,0 +1,116 @@
+<style>
+	.sidebar {
+	width: 200px;
+	background-color: #000;
+	padding: 20px;
+	border-radius: 8px;
+	min-height: 400px;
+	overflow: hidden;
+	}
+
+	.sidebar h2 {
+	color: #ff4081;
+	text-align: center;
+	margin-bottom: 20px;
+	}
+
+	.category-nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	}
+
+	.category-nav li {
+	margin: 10px 0;
+	cursor: pointer;
+	color: white;
+	transition: color 0.3s;
+	}
+
+	.category-nav li:hover {
+	color: #ff4081;
+	}
+
+	.category-content {
+	height: 0;
+	visibility: hidden;
+	overflow: hidden;
+	transition: height 0.5s ease, visibility 0.5s ease;
+	background-color: #000;
+	color: white;
+	}
+
+	.category-content ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	}
+
+	.category-content li {
+	margin: 5px 0;
+	}
+
+	.category-content a {
+	color: white;
+	text-decoration: none;
+	transition: color 0.3s;
+	padding: 5px;
+	}
+
+	.category-content a:hover {
+	background-color: #ddd;
+	color: black;
+	border-radius: 4px;
+	font-size: 19px;
+	}
+
+	.category-content a.open {
+	background-color: #ddd;
+	color: black;
+	border-radius: 4px;
+	font-size: 19px;
+	}
+
+	.category-content.open {
+	visibility: visible;
+	height: 100px;
+	}
+
+	
+	
+</style>
+
+<div class="sidebar">
+    <h2>Categories</h2>
+    <ul class="category-nav">
+        <li category="for-him">For Him
+            <div class="category-content" id="for-him">
+                <ul>
+                    <li><a href="/category/for-him?subcategory=tshirts">T-shirts</a></li>
+                    <li><a href="/category/for-him?subcategory=polo-shirts">Polo shirts</a></li>
+                    <li><a href="/category/for-him?subcategory=shorts">Shorts</a></li>
+                </ul>
+            </div>
+        </li>
+        <li category="for-her">For Her
+            <div class="category-content" id="for-her">
+                <ul>
+                    <li><a href="/category/for-her?subcategory=dresses">Dresses</a></li>
+                    <li><a href="/category/for-her?subcategory=blouses">Blouses</a></li>
+                    <li><a href="/category/for-her?subcategory=skirts">Skirts</a></li>
+                </ul>
+            </div>
+        </li>
+        <li category="for-kids">For Kids
+            <div class="category-content" id="for-kids">
+                <ul>
+                    <li><a href="/category/for-kids?subcategory=boots">Boots</a></li>
+                    <li><a href="/category/for-kids?subcategory=jackets">Jackets</a></li>
+                    <li><a href="/category/for-kids?subcategory=hoodies">Hoodies</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+	

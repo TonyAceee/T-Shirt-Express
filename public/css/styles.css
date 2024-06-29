@@ -1,0 +1,64 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 1rem;
+}
+
+
+.slider {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    background-color: #d1cfcf;
+}
+
+.slider-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    height: 100%;
+    align-items: center;
+}
+
+.slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1cfcf;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#video-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+    #video-container video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.overlay-text {
+    position: absolute;
+    bottom: 70px;
+    left: 45px;
+    color: white;
+    z-index: 1;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+
+
+

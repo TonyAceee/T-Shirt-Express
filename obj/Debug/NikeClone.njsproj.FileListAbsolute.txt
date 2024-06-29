@@ -1,0 +1,6 @@
+T:\JS\NikeClone\obj\Debug\NikeClone.njsproj.AssemblyReference.cache
+T:\JS\NikeClone\obj\Debug\NikeClone.njsproj.CoreCompileInputs.cache
+T:\JS\NikeClone\bin\Microsoft.NodejsTools.WebRole.dll
+T:\JS\WebSite\obj\Debug\NikeClone.njsproj.AssemblyReference.cache
+T:\JS\WebSite\obj\Debug\NikeClone.njsproj.CoreCompileInputs.cache
+T:\JS\WebSite\bin\Microsoft.NodejsTools.WebRole.dll

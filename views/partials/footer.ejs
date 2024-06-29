@@ -1,0 +1,90 @@
+<style>
+footer {
+background-color: #000;
+color: #fff;
+padding: 1rem;
+text-align: center;
+}
+
+.footer-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.footer-container > div {
+flex: 1 1 200px;
+margin: 10px;
+}
+
+.footer-container h3 {
+margin-bottom: 20px;
+font-size: 18px;
+}
+
+.footer-container p,
+.footer-container a {
+color: white;
+text-decoration: none;
+margin-bottom: 10px;
+display: block;
+}
+
+.footer-container input[type="email"] {
+width: 80%;
+padding: 10px;
+margin-right: 10px;
+}
+
+.footer-container button {
+padding: 10px 20px;
+background-color: #555;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+.footer-container button:hover {
+background-color: #777;
+}
+
+@media (max-width: 768px) {
+.footer-container {
+flex-direction: column;
+align-items: center;
+}
+
+.footer-container > div {
+margin: 20px 0;
+}
+}
+</style>
+
+<footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About us</h3>
+                <p>Short example.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contacts</h3>
+                <p>Adress: Example str. 1</p>
+                <p>Phone: +48 111 111 111</p>
+                <p>Email: example@example.com</p>
+            </div>
+            <div class="footer-social">
+                <h3>Social</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Telegram</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="footer-subscribe">
+                <h3>Newsletter</h3>
+                <input type="email" placeholder="Your email">
+                <button>Follow</button>
+            </div>
+        </div>
+    </footer>

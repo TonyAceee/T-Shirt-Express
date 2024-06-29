@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CopyWebsite</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/clothes.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head> 
+
+<body>
+<%- include('partials/header'); %>
+
+<%- include('partials/nav'); %>
+
+   <main>
+    <div class="cart-container">
+        <% if (cart && cart.length > 0) { %>
+            <% cart.forEach(item => { %>
+                <div class="cart-item">
+                    <img src="<%= item.product.image_url %>" alt="<%= item.product.name %>">
+                    <p><%= item.product.name %></p>
+                    <p>Size: <%= item.size %></p>
+                    <p>Quantity: <%= item.quantity %></p>
+                    <p>Price: <%= item.product.price %> zl</p>
+                    <form action="/cart/remove" method="POST">
+                        <input type="hidden" name="productId" value="<%= item.product._id %>">
+                        <input type="hidden" name="size" value="<%= item.size %>">
+                        <label for="quantity">Remove Quantity:</label>
+                    <input type="number" name="quantity" min="1" max="<%= item.quantity %>" value="1">
+                        <button type="submit">Remove</button>
+                    </form>
+                </div>
+            <% }) %>
+            <div class="cart-total">
+                <p>Total: <%= total %> zl</p>
+            </div>
+        <% } else { %>
+            <p>Your cart is empty.</p>
+        <% } %>
+    </div>
+    </main>
+    <%- include('partials/footer'); %>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/clothes.js"></script>
+</body>
+
+</html>

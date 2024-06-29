@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CopyWebsite</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/clothes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head> 
+
+<body>
+<%- include('partials/header'); %>
+
+<%- include('partials/nav'); %>
+
+    <div class="slider">
+        <div class="slider-inner">
+            <div class="slide">Buy one get two</div>
+            <div class="slide">-10% with code: 911</div>
+            <div class="slide">Order to your home</div>
+        </div>
+    </div>
+    <div id="video-container">
+
+        <video autoplay muted loop id="video-background">
+            <source src="/img/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay-text">DISCOVER YOUR <br> OWN STYLE.</div>
+    </div>
+    
+    <%- include('partials/footer'); %>
+    <script src="/js/slider.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
